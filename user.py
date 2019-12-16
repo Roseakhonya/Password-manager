@@ -17,4 +17,8 @@ def display_user():
     A function that helps display a user
     '''
 def login_user(username,password):
-    
+    '''
+    A function in which a user is autheticated
+    '''
+    check_user = Credentials.verify_user(username,password)
+    return check_user
