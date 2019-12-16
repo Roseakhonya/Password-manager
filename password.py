@@ -47,9 +47,30 @@ class User:
 
     def save_details(self):
         '''
-        method to save a new credential instance to the credentials list
+        A function that saves a new credential property to the credentials list
         '''
         Credentials.credentials_list.append(self)
+
+    def delete_credentials(self):
+        '''
+        A function which deletes a credential from the existing one
+        '''
+    
+    @classmethod
+    def find_credential(cls, account):
+        '''
+        A function that tries to find out a certain credential from the user account
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
+    @classmethod
+    def if_credential_exist(cls,account):
+        '''
+        a function to check if the credential entered exists on the list and it returns true or false
+        '''
+        
+    
     
 
 
