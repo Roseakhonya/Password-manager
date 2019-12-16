@@ -60,9 +60,12 @@ def generate_Password():
     '''
     auto_password = Credentials.generate_Password()
     return auto_password
-def password_locker():
-    print("Hi")
 
+def main():
+    print("Hi welcome to your password manager...\n tell us what you wish to do:\n CA ---  create new account  \n AH --- Account exists  \n")
+    short_code=input("").lower().strip()
+
+    if short_code
 
 
 
