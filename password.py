@@ -38,7 +38,19 @@ class User:
         '''
         credentials_list = []
     def __init__(self, account, userName, password):
-        
+        '''
+        A function to define the user credentials"
+        '''
+        self.account = account
+        self.username = userName
+        self.password = password
+
+    def save_details(self):
+        '''
+        method to save a new credential instance to the credentials list
+        '''
+        Credentials.credentials_list.append(self)
+    
 
 
 
