@@ -65,7 +65,24 @@ def main():
     print("Hi welcome to your password manager...\n tell us what you wish to do:\n CA ---  create new account  \n AH --- Account exists  \n")
     short_code=input("").lower().strip()
 
-    if short_code
+    if short_code == "ca":
+        print("sign in")
+        print('*' * 50)
+        userName = input("userName: ")
+
+        while True:
+            print("ep - enter your password :n\ cp - create own password")
+            choose_password= input().lower().strip
+
+            if choose_password == "cp":
+                password = input("Enter password\ n")
+                break
+            elif choose_password == "ep":
+                password = generate_Password()
+                break
+
+            else
+            print("wrong password")
 
 
 
