@@ -37,6 +37,8 @@ class User:
         Create a credentials class to create new objects of credentials
         '''
         credentials_list = []
+    def __init__(self, account, userName, password):
+        
 
 
 
