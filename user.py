@@ -60,7 +60,9 @@ def generate_Password():
     '''
     auto_password = Credentials.generate_Password()
     return auto_password
-    
+def password_locker():
+    print("Hi")
+
 
 
 
