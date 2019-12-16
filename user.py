@@ -1,5 +1,5 @@
 from password import User
-from password import Credentials
+from user import Credentials
 
 def create_new_user(username, password):
     '''
@@ -12,3 +12,9 @@ def save_user(user):
     Function to save a new user
     '''
     user.save_user
+def display_user():
+    '''
+    A function that helps display a user
+    '''
+def login_user(username,password):
+    
