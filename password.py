@@ -32,6 +32,13 @@ class User:
         A method that deletes a saved username
         '''
 
+    class Credentials():
+        '''
+        Create a credentials class to create new objects of credentials
+        '''
+        credentials_list = []
+        
+
 
 
      
