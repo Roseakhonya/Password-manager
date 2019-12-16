@@ -21,8 +21,17 @@ class User:
         User.user_list.append(self)
 
     @classmethod
-    def display_user(cls)
-    
+    def display_user(cls):
+        return cls.user_list
+        '''
+        A method that displays username
+        '''
+    def delete_user(self):
+        User.user_list.remove(self)
+        '''
+        A method that deletes a saved username
+        '''
+
 
 
      
