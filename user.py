@@ -80,9 +80,77 @@ def main():
             elif choose_password == "ep":
                 password = generate_Password()
                 break
+            else:
+                print("wrong password")
 
-            else
-            print("wrong password")
+        save_user(create_new_user(userName,password))
+        print(f"Hi {userName}, you have succesfully created your account! Your password is: {password}")
+
+    elif short_code == "ah":
+        print("Enter your User name and your Password to log in:")
+
+        username = input("UserName: ")
+        password = input("password: ")
+        login = login_user(username,password)
+
+        if login_user == login:
+            print(f"Hi there, welcome to password manager application")  
+            print('\n')
+        
+        while True:
+            print("Kindly choose any of the short codes provided:\n cn - add new credential \n ds - Display all credentials \n rc - retrieve credental \n dl- Delete credential \n EX - Exit\n")
+            short_code = input().lower().strip()
+
+            if short_code == "cn":
+                print("Create Credential")
+                print("Account name ....")
+                account = input().lower()
+                print("Your username")
+                userName = input()
+
+                while True:
+                    print(" ep - Key own pasword :\n  gp- To generate random password")
+                    choose_password = input().lower().strip()
+
+                    if choose_password == 'ep':
+                        password = input("Enter your password\n")
+                        break
+
+                    elif choose_password == 'gp':
+                        password = generate_Password()
+                        break
+                    else:
+                        print("invalid! Try again")
+
+                save_credentials(create_new_credential(account,userName,password))
+                    print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} successful!")
+        
+        elif short_code == "ds":
+            if display_accounts_details():
+                print("Your accounts are listed below: ")
+                print('*' * 30)
+                print('_' * 30)
+
+                for account in display_accounts_details():
+                    print(f" account:{account.account} \n Username:{userName}\n Password:{password}")
+                    print('_'* 30)
+                print('*' * 30)
+                 else:
+                print("No credentials found")
+
+        elif short_code == "rc":
+            print("Enter account")
+            search_name = input().lower()
+
+        if find_credential(search_name):
+                search_credential = find_credential(search_name)
+                print(f"Account Name : {search_credential.account}")
+                print(f"User Name: {search_credential.userName} Password :{search_credential.password}")
+            
+
+                
+                
+                    
 
 
 
