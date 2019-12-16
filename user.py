@@ -98,7 +98,7 @@ def main():
             print('\n')
         
         while True:
-            print("Kindly choose any of the short codes provided:\n cn - add new credential \n ds - Display all credentials \n rc - retrieve credental \n dl- Delete credential \n EX - Exit\n")
+            print("Kindly choose any of the short codes provided:\n cn - add new credential \n ds - Display all credentials \n rc - retrieve credental \n dl- Delete credential \n ex- Exit\n")
             short_code = input().lower().strip()
 
             if short_code == "cn":
@@ -146,7 +146,40 @@ def main():
                 search_credential = find_credential(search_name)
                 print(f"Account Name : {search_credential.account}")
                 print(f"User Name: {search_credential.userName} Password :{search_credential.password}")
+            else:
+                print("No match found")
+
+        elif short_code == "dl":
+            print("Type credential you wish to delete")
+            search_name = input().lower()
+            if find_credential(search_name):
+                search_credential = find_credential(search_name)
+                print("_"*50)
+                search_credential.delete_credentials()
+                print('\n')
+                print(f"Your {search_credential.account} deleted.")
+                print('\n')
+            else:
+                print(f"{search_credenttial.account} not found.")
+
+    elif short_code == 'gp':
+        password = generate_Password()
+            print(f" {password} generated")
+        elif short_code == 'ex':
+            print("Thanks for your time")
+            break
+        else:
+            print("Validate your details")
+    else:
+        print("Key in the correct details")
+
+
+if __name__ == '__main__':
+    password()
+
+
             
+
 
                 
                 
