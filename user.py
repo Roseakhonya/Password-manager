@@ -22,3 +22,10 @@ def login_user(username,password):
     '''
     check_user = Credentials.verify_user(username,password)
     return check_user
+
+def create_new_credential(account, userName, password):
+    '''
+    A function which creates new credentials for new user
+    '''
+    new_credential = Credentials(account, userName, password)
+    return new_credential
