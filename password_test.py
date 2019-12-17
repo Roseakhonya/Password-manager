@@ -81,7 +81,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
 
-     def test_find_credential(self):
+    def test_find_credential(self):
         '''
         test to try and retrieve a given credential"
         '''
@@ -93,7 +93,7 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(get_credential.account,test_credential.account)
 
-    def test_credential_exist(self):
+     def test_credential_exist(self):
         '''
         test to check existence of a specific credential.
         '''
@@ -103,7 +103,8 @@ class TestCredentials(unittest.TestCase):
         credential_is_found = Credentials.if_credential_exist()
         self.assertTrue(credential_is_found)
 
-     def test_display_all_saved_credentials(self):
+    def test_display_all_saved_credentials(self):
+
         '''
         method which lists all available credentials
         '''

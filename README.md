@@ -22,9 +22,11 @@ Running the application
 Navigate into the cloned folder using terminal a to run the app. The app will open on terminal
 
 # Behaviour Driven Development(BDD)
-
-
-
+User navigates to the the terminal and opens the application.
+It prints out a welcome message.
+One is asked to choose a short code to create account or whether has an existing account.
+If create account, one keys in user name and given option to enter password or allow automatic generation of password which is displayed.
+If one decides to enter passwords, it allows them to enter their own
 
 
 # Support and contact details
