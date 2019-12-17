@@ -93,7 +93,7 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(get_credential.account,test_credential.account)
 
-     def test_credential_exist(self):
+     pdef test_credential_exist(self):
         '''
         test to check existence of a specific credential.
         '''
@@ -110,8 +110,6 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
-
-
 
 if __name__ == "__main__":
     unittest.main() 
