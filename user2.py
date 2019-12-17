@@ -24,15 +24,6 @@ def display_user():
     A function that helps display a user
     '''
 
-
-def login_user(username, password):
-    '''
-    A function in which a user is autheticated
-    '''
-    check_user = Credentials.verify_user(username, password)
-    return check_user
-
-
 def create_new_credentials(account, userName, password):
     '''
     A function which creates new credentials for the user account
@@ -86,13 +77,6 @@ def main():
                 print('*' * 10)
             
             elif choose_password == "gp":
-                # def randomString(stringLength):
-                #     '''
-                #     Generate random string 
-                #     '''
-                #     letters = string.ascii_letters
-                #     return''.join(random.choice(letters) for i in range(stringLength))
-                #     print("Your password is", randomString(8))
                 s="abcdefghijklmnopqrsy12345678@#$%&*"
                 pword="".join(random.sample(s,8))
                 print(f"Hey {userName} Your password is {pword}")
@@ -102,9 +86,9 @@ def main():
             else:
                 print("wrong password")
 
-        # save_user(create_new_user(userName, password))
-        # print(
-        #     f"Hi {userName}, you have succesfully created your account! Your password is: {password}")
+        save_user(create_new_user(userName, password))
+        print(
+            f"Hi {userName}, you have succesfully created your account! Your password is: {password}")
 
 #     elif short_code == "ah":
 #         print("Enter your User name and your Password to log in:")
